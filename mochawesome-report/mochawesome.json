@@ -1,0 +1,193 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-12-26T08:25:45.854Z",
+    "end": "2025-12-26T08:25:55.241Z",
+    "duration": 9387,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0d4973a6-e621-4f08-a602-48004c2f0a37",
+      "title": "",
+      "fullFile": "C:\\laragon\\www\\WebUIAutomation1\\test\\saucedemo.spec.js",
+      "file": "\\test\\saucedemo.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d31012f3-e2e8-4ae1-ad75-cb635c98ef33",
+          "title": "Tugas Sesi 9 - Web UI Automation Fundamental",
+          "fullFile": "C:\\laragon\\www\\WebUIAutomation1\\test\\saucedemo.spec.js",
+          "file": "\\test\\saucedemo.spec.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"Tugas Sesi 9 - Web UI Automation Fundamental\"",
+              "fullTitle": "Tugas Sesi 9 - Web UI Automation Fundamental \"before all\" hook in \"Tugas Sesi 9 - Web UI Automation Fundamental\"",
+              "timedOut": false,
+              "duration": 978,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = await new Builder().forBrowser('chrome').build();\nawait driver.manage().window().maximize();",
+              "err": {},
+              "uuid": "d42fd909-03a6-4d87-8d25-abd77001d89b",
+              "parentUUID": "d31012f3-e2e8-4ae1-ad75-cb635c98ef33",
+              "isHook": true,
+              "skipped": false
+            },
+            {
+              "title": "\"before each\" hook in \"Tugas Sesi 9 - Web UI Automation Fundamental\"",
+              "fullTitle": "Tugas Sesi 9 - Web UI Automation Fundamental \"before each\" hook in \"Tugas Sesi 9 - Web UI Automation Fundamental\"",
+              "timedOut": false,
+              "duration": 1,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "console.log(`\\n>>> Memulai Test Case: \"${this.currentTest.title}\"`);",
+              "err": {},
+              "uuid": "359f71ce-fc41-4c37-bd1c-5ca0f3c1bebf",
+              "parentUUID": "d31012f3-e2e8-4ae1-ad75-cb635c98ef33",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"Tugas Sesi 9 - Web UI Automation Fundamental\"",
+              "fullTitle": "Tugas Sesi 9 - Web UI Automation Fundamental \"after all\" hook in \"Tugas Sesi 9 - Web UI Automation Fundamental\"",
+              "timedOut": false,
+              "duration": 3677,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.sleep(3000);\nawait driver.quit();",
+              "err": {},
+              "uuid": "78ddf592-099a-4727-a55a-87fe83371f2b",
+              "parentUUID": "d31012f3-e2e8-4ae1-ad75-cb635c98ef33",
+              "isHook": true,
+              "skipped": false
+            },
+            {
+              "title": "\"after each\" hook in \"Tugas Sesi 9 - Web UI Automation Fundamental\"",
+              "fullTitle": "Tugas Sesi 9 - Web UI Automation Fundamental \"after each\" hook in \"Tugas Sesi 9 - Web UI Automation Fundamental\"",
+              "timedOut": false,
+              "duration": 1002,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.sleep(1000); \nconsole.log(`<<< Selesai Test Case: \"${this.currentTest.title}\"`);",
+              "err": {},
+              "uuid": "28597fe0-c311-492f-acd7-dddee90a40f5",
+              "parentUUID": "d31012f3-e2e8-4ae1-ad75-cb635c98ef33",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Harus sukses login dengan standard_user",
+              "fullTitle": "Tugas Sesi 9 - Web UI Automation Fundamental Harus sukses login dengan standard_user",
+              "timedOut": false,
+              "duration": 1584,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.get('https://www.saucedemo.com');\nawait driver.findElement(By.id('user-name')).sendKeys('standard_user');\nawait driver.findElement(By.id('password')).sendKeys('secret_sauce');\nawait driver.findElement(By.id('login-button')).click();\nlet titleElement = await driver.findElement(By.className('title'));\nlet titleText = await titleElement.getText();\nassert.strictEqual(titleText, 'Products');",
+              "err": {},
+              "uuid": "2e088395-5cfb-41d0-a48d-218d80632223",
+              "parentUUID": "d31012f3-e2e8-4ae1-ad75-cb635c98ef33",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Harus berhasil mengurutkan produk dari Z-A",
+              "fullTitle": "Tugas Sesi 9 - Web UI Automation Fundamental Harus berhasil mengurutkan produk dari Z-A",
+              "timedOut": false,
+              "duration": 1108,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let sortDropdown = await driver.findElement(By.className('product_sort_container'));\nawait sortDropdown.click();\nawait driver.findElement(By.css('option[value=\"za\"]')).click();\nlet firstItem = await driver.findElement(By.css('.inventory_item_name')).getText();\nconsole.log(`    (Info: Barang teratas adalah '${firstItem}')`); // Log tambahan\nassert.strictEqual(firstItem, 'Test.allTheThings() T-Shirt (Red)');",
+              "err": {},
+              "uuid": "673d7a78-a2db-4a34-b157-d40ba6e60f93",
+              "parentUUID": "d31012f3-e2e8-4ae1-ad75-cb635c98ef33",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2e088395-5cfb-41d0-a48d-218d80632223",
+            "673d7a78-a2db-4a34-b157-d40ba6e60f93"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2692,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 30000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "11.7.5"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.3.2"
+    }
+  }
+}
